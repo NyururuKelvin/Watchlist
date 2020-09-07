@@ -1,4 +1,4 @@
-{% extends 'base.html'%}
+{% extends 'bootstrap/base.html'%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,9 +10,14 @@
         {% endif %}
     </head>
     <body>
-        {% block content %}
-        <h4>test</h4>
-        {% endblock%}
+        <!-- Navbar block  --> 
+        {% block navbar %}
+        {% include 'navbar.html' %}
+        {% endblock %}
+        <!-- Content block -->
 
+        {% block content %}
+
+        {% endblock%}
     </body>
 </html>
