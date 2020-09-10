@@ -27,13 +27,13 @@ def index():
     else:
         return render_template('index.html', title = title, popular = popular_movies, upcoming = upcoming_movie, now_showing = now_showing_movie )
 
-@main.route('/movie/<int:id>')
-def movie(id):
+@main.route('/movie/<int:movie_id>')
+def movie(movie_id):
 
     '''
     View movie page function that returns the movie details page and its data
     '''
-    movie = get_movie(id)
+    movie = get_movie(movie_id)
     title = f'{movie.title}'
     reviews = Review.get_reviews(movie.id)
 
